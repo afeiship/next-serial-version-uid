@@ -4,16 +4,13 @@ require('../src/next-serial-version-uid');
 
 describe('next/serialVersionUid', function () {
 
-  it('nx.serialVersionUid', function () {
-    var obj1 = {name: 'fei'};
-    var obj2 = {email: '1290657123@qq.com'};
-
-    var result = {};
-
-    nx.serialVersionUid(result, obj1, obj2);
-
-    assert.equal(result.name, obj1.name);
-    assert.equal(result.email, obj2.email);
+  it('nx.serialVersionUid should between 17 & 18 length', function () {
+    var result;
+    for (var i = 0; i < 1000; i++) {
+      var result = nx.serialVersionUid();
+      assert.equal(result.length == 19 || result.length == 18, true);
+    }
   });
+
 
 });
