@@ -3,7 +3,7 @@
  * description: Next serialVersionUID package.
  * homepage: https://github.com/afeiship/next-serial-version-uid
  * version: 1.0.0
- * date: 2021-03-17 10:20:36
+ * date: 2021-03-17 10:21:53
  * license: MIT
  */
 
