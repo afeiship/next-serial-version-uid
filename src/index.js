@@ -1,8 +1,7 @@
 (function () {
-
-  var global = global || this || self || window;
-  var nx = global.nx || require('next-js-core2');
-  var SYMBOL_ARRAY = ['', '-'];
+  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
+  var nx = global.nx || require('@jswork/next');
+    var SYMBOL_ARRAY = ['', '-'];
 
   function random() {
     var str = String(Math.random() * 1e18);
@@ -18,9 +17,7 @@
     return symbol + str;
   };
 
-
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = nx.serialVersionUid;
   }
-
-}());
+})();
